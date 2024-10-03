@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page.css">
+    <title>Mr Clothing</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-59TNQ592');</script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+      // Standard Event: Page View
+      function trackPageView() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'pageview',
+          'page_url': window.location.href,
+          'page_title': document.title,
+          'user_id': 'USER1234'
+        });
+      }
+
+      // Standard Event: View Content
+      function viewCon() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'view_item',
+          currency: "USD",
+          value: 30.03,
+          items: [
+          {
+          item_id: "SKU_12345",
+          item_name: "Stan and Friends Tee",
+          affiliation: "Google Merchandise Store",
+          coupon: "SUMMER_FUN",
+          discount: 2.22,
+          index: 0,
+          item_brand: "Google",
+          item_category: "Apparel",
+          item_category2: "Adult",
+          item_category3: "Shirts",
+          item_category4: "Crew",
+          item_category5: "Short sleeve",
+          item_list_id: "related_products",
+          item_list_name: "Related Products",
+          item_variant: "green",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          price: 10.01,
+          quantity: 3
+         }
+         ]
+        });
+      }
+
+      // Standard Event: Add to Cart
+      function AddToCart() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'add_to_cart',
+          currency: "USD",
+          value: 30.03,
+          type:'Shoes',
+          items: [
+            {
+          item_id: "SKU_12345",
+          item_name: "Stan and Friends Tee",
+          affiliation: "Google Merchandise Store",
+          coupon: "SUMMER_FUN",
+          discount: 2.22,
+          index: 0,
+          item_brand: "Google",
+          item_category: "Apparel",
+          item_category2: "Adult",
+          item_category3: "Shirts",
+          item_category4: "Crew",
+          item_category5: "Short sleeve",
+          item_list_id: "related_products",
+          item_list_name: "Related Products",
+          item_variant: "green",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          price: 10.01,
+          quantity: 3
+    }
+  ]
+        });
+      }
+
+      // Standard Event: Purchase
+      function trackPurchase() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'purchase',
+          transaction_id: "T_12345",
+    // Sum of (price * quantity) for all items.
+    value: 72.05,
+    tax: 3.60,
+    shipping: 5.99,
+    currency: "USD",
+    coupon: "SUMMER_SALE",
+    items: [
+     {
+      item_id: "SKU_12345",
+      item_name: "Stan and Friends Tee",
+      affiliation: "Google Merchandise Store",
+      coupon: "SUMMER_FUN",
+      discount: 2.22,
+      index: 0,
+      item_brand: "Google",
+      item_category: "Apparel",
+      item_category2: "Adult",
+      item_category3: "Shirts",
+      item_category4: "Crew",
+      item_category5: "Short sleeve",
+      item_list_id: "related_products",
+      item_list_name: "Related Products",
+      item_variant: "green",
+      location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+      price: 10.01,
+      quantity: 3
+    },
+    {
+      item_id: "SKU_12346",
+      item_name: "Google Grey Women's Tee",
+      affiliation: "Google Merchandise Store",
+      coupon: "SUMMER_FUN",
+      discount: 3.33,
+      index: 1,
+      item_brand: "Google",
+      item_category: "Apparel",
+      item_category2: "Adult",
+      item_category3: "Shirts",
+      item_category4: "Crew",
+      item_category5: "Short sleeve",
+      item_list_id: "related_products",
+      item_list_name: "Related Products",
+      item_variant: "gray",
+      location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+      price: 21.01,
+      promotion_id: "P_12345",
+      promotion_name: "Summer Sale",
+      quantity: 2
+    }]
+        });
+      }
+
+      // Standard Event: Sign Up
+      function trackSignup() {
+        window.dataLayer.push({
+          'event': 'signup',
+           method: "Google",
+          'event_category': 'User Interaction',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // Standard Event: Search
+      function trackSearch() {
+        var search_term = document.getElementById('search_box').value;
+        window.dataLayer.push({
+          'event': 'search',
+          'search_term': search_term,
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+    
+    function trackLogin() {
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'login',
+        'method': 'Email', // Specify the login method, e.g., Email, Google, Facebook
+        'user_id': 'USER1234',
+        'page_url': window.location.href
+        });
+      }
+      // Standard Event: Lead Generation
+      function trackLead() {
+        window.dataLayer.push({
+          'event': 'generate_lead',
+          'lead_type':'Registered',
+          'user_id': 'USER1234',
+          'page_url': window.location.href,
+          currency: "USD",
+          value: 30.03,
+          lead_source: "Trade show"
+        });
+      }
+
+      // Standard Event: Initiate Checkout
+      function trackInitiateCheckout() {
+        window.dataLayer.push({
+          'event': 'begin_checkout',
+          currency: "USD",
+          value: 30.03,
+          coupon: "SUMMER_FUN",
+          items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }
+          ]
+        });
+      }
+
+      // Custom Event: Hover on Perfumes
+      function trackCustomEvent1() {
+        window.dataLayer.push({
+          'event': 'hover_perfumes',
+          'product': 'Perfumes',
+          'hover_type':'Mouse',
+          'hover_id':112,
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // Custom Event: Watches Click
+      function trackCustomEvent2() {
+        window.dataLayer.push({
+          'event': 'click_watches',
+          'item': 'Watches',
+          'click_id':23,
+          'watch_no':5,
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // Custom Event: Input Focus
+      function trackCustomEvent3() {
+        window.dataLayer.push({
+          'event': 'focus_input',
+          'interaction': 'input_focus',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // Custom Event: Add Perfumes to Cart
+      function trackCustomEvent4() {
+        window.dataLayer.push({
+          'event': 'add_to_fav',
+          'product_name': 'Perfumes',
+          'action': 'add_to_fav',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      // Custom Event: Header Click
+      function trackCustomEvent5() {
+        window.dataLayer.push({
+          'event': 'click_header',
+          'interaction': 'header_click',
+          'user_id': 'USER1234',
+          'page_url': window.location.href
+        });
+      }
+
+      window.onload = trackPageView;
+    </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQZ5PWVQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="top">
+      <div class="container spaces">
+          <h1 class="primary-text" onclick="trackCustomEvent5()">Get Collections of best in class MEN's clothing</h1>
+          <button class="purchase" onclick="trackPurchase()">Purchase</button>
+          <input type="text" id="search_box" onfocus="trackCustomEvent3()" placeholder="Search here...">
+          <button onclick="trackSearch()">Search</button>
+          <button onclick="trackSignup()">Sign Up</button>
+          <button onclick="trackLead()">Lead Button</button>
+          <button onclick="trackLogin()">Login</button>
+      </div>
+  </header>
+
+  <main>
+     <section class="wardrobe">
+         <div class="container">
+             <h2 class="sec-title">Wardrobe</h2>
+             <div class="segregate">
+                 <a href="#" class="wardrobe_items" onclick="trackInitiateCheckout()"> <!-- Standard Event: View Category -->
+                     <img class="wall" src="stock.jpg" alt="clothes on wall" onmouseover="viewCon()">
+                     <p class="wardrobe_details">Travelling Outfits</p>
+                 </a>
+                 <a href="#" class="wardrobe_items">
+                    <img src="wardrobecollecction.jpg" alt="orange jackets">
+                    <p class="wardrobe_details">Winter Collection</p>
+                  </a>
+                  <a href="#" class="wardrobe_items">
+                      <img src="product.jpg" alt="checks blazer" onmouseover="viewCon()">
+                      <p class="wardrobe_details">Office Wears</p>
+                  </a>
+             </div>
+         </div>
+     </section>
+
+     <section class="buy_products">
+         <div class="container">
+             <h2 class="sec-title">Our Products</h2>
+             <info class="product">
+                 <img src="mens-shoes.jpg" alt="shoes">
+                 <h3 class="product_title">Shoes</h3>
+                 <p class="product_description">Shoes that never goes out style!</p>
+                 <a href="#" class="btn" onclick="AddToCart()">Add To Cart</a>
+             </info>
+
+             <info class="product">
+                 <img src="perfumes.jpg" alt="perfumes" onmouseover="trackCustomEvent1()">
+                 <h3 class="product_title">Perfumes</h3>
+                 <p class="product_description">The perfumes will make you noticed!</p>
+                 <a href="#" class="btn" onclick="trackCustomEvent4()">Add To Fav</a>
+             </info>
+
+             <info class="product">
+                 <img src="watch-cases.jpg" alt="watch-cases">
+                 <h3 class="product_title">Watches</h3>
+                 <p class="product_description">Time to make a difference!</p>
+                 <a href="#" class="btn" onclick="trackCustomEvent2()">Show more...</a>
+             </info>
+         </div>
+     </section>
+  </main>
+
+</body>
+</html>
